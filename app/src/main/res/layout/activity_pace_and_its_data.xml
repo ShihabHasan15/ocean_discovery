@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/learning_activity_background"
+    tools:context=".pace_and_its_data">
+
+    <ImageView
+        android:id="@+id/cross_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/cross_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Level 2"
+        android:textColor="@color/white"
+        android:fontFamily="@font/digitalt"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toEndOf="@+id/cross_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digitalt"
+        android:text="1200"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/smiley_face"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/next_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="#67EB00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="5px">
+
+        <TextView
+            android:id="@+id/next_btn_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/digitalt"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="320dp"
+        android:background="@drawable/detail_board"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Key Areas PACE Studies"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#D5000000"
+                    android:fontFamily="@font/bubble_bobble"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bubble_bobble"
+                    android:text="Oceans (Plankton and Ocean Health):\n
+PACE measures ocean color to detect and monitor phytoplankton (microscopic ocean plants). These organisms form the base of the marine food web and play a critical role in carbon sequestration by absorbing carbon dioxide (CO2) from the atmosphere.
+        \n\nThe data helps scientists:\n
+            Track the productivity of ocean ecosystems.
+            Understand how climate change affects the health of marine life.
+            Monitor harmful algal blooms.\n\n
+
+    Atmosphere (Aerosols and Clouds)
+        PACE also collects data on aerosols (tiny particles in the atmosphere) and cloud properties. Aerosols come from natural sources like dust and volcanic ash, as well as human activities such as burning fossil fuels.
+        This data helps in:\n\n
+            Understanding the impact of aerosols on air quality.
+            Studying their influence on climate and weather patterns.
+            Improving climate models by measuring how aerosols interact with clouds and sunlight.
+
+Types of Data PACE Stores:\n\n
+
+PACE gathers various kinds of environmental data related to oceans and the atmosphere:
+
+    \n\nOcean Color Data:\n
+        Spectral reflectance of sunlight off the ocean's surface. This data helps identify different types of phytoplankton and monitor water quality, sediment, and dissolved organic material.
+
+    \n\nAerosol Data\n
+        Information about the size, distribution, and composition of aerosols in the atmosphere, which helps scientists study their effects on climate and weather.
+
+    \n\nCloud Data\n
+        Measurements of cloud cover, structure, and properties (such as thickness and water content). This data improves our understanding of how clouds affect the Earth’s energy balance and precipitation.
+
+    \n\nBiogeochemical Cycles\n
+        Data on the carbon cycle and nutrient cycling in the oceans. PACE tracks how much carbon dioxide is absorbed by phytoplankton and other marine organisms, which is crucial for understanding carbon sequestration.
+
+    \n\nRadiance Data\n
+        Hyperspectral radiance data collected from ultraviolet to shortwave infrared wavelengths, allowing scientists to analyze a broad range of environmental factors, from ocean color to atmospheric gases.
+
+\n\nApplications of PACE Data:\n
+
+    Climate Change Research: PACE data helps scientists better understand the ocean’s role in regulating climate, including how it absorbs heat and carbon.
+    \nBiodiversity Monitoring: Tracking phytoplankton populations aids in studying biodiversity and how marine life is responding to environmental changes.
+    \nAir Quality and Health: Data on aerosols is vital for assessing air quality and the potential health impacts of airborne particles.
+    \nFisheries Management: Ocean health data can help manage fisheries by predicting shifts in marine ecosystems.
+    \nWeather and Climate Modeling: PACE’s data improves predictions of weather patterns, cloud behavior, and the overall climate system.
+"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#D5000000"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bubble_bobble"
+                    android:text="Clouds are made up of tiny droplets of water or ice crystals. Even though they look light and fluffy, an average cumulus cloud can weigh as much as 1.1 million pounds!"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#D5000000"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

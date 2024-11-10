@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".word_game">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finishBtn"
+        style="@style/button1"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="FINISH"
+        android:textScaleX="1.2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cancelBtn"
+        style="@style/button3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Exit from this page"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/lessonTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:text="Lesson 1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancelBtn" />
+
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/summery_notes_regular"
+        android:text="Which animal is this?"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cancelBtn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/sWordLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTxt">
+
+        <ImageView
+            android:id="@+id/answerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/cat"
+            app:layout_constraintBottom_toTopOf="@id/answerLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/answerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/letter1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="C"
+                android:textColor="@color/green"
+                android:textSize="50sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/dash1"
+                app:layout_constraintEnd_toEndOf="@+id/dash1"
+                app:layout_constraintStart_toStartOf="@+id/dash1" />
+
+            <View
+                android:id="@+id/dash1"
+                android:layout_width="35dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/dash"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dash2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/letter2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="I"
+                android:textColor="@color/green"
+                android:textSize="50sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/dash2"
+                app:layout_constraintEnd_toEndOf="@+id/dash2"
+                app:layout_constraintStart_toStartOf="@+id/dash2" />
+
+            <View
+                android:id="@+id/dash2"
+                android:layout_width="35dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/dash"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dash3"
+                app:layout_constraintStart_toEndOf="@id/dash1" />
+
+            <TextView
+                android:id="@+id/letter3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="T"
+                android:textColor="@color/green"
+                android:textSize="50sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/dash3"
+                app:layout_constraintEnd_toEndOf="@+id/dash3"
+                app:layout_constraintStart_toStartOf="@+id/dash3" />
+
+            <View
+                android:id="@+id/dash3"
+                android:layout_width="35dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/dash"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dash4"
+                app:layout_constraintStart_toEndOf="@id/dash2" />
+
+            <TextView
+                android:id="@+id/letter4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="T"
+                android:textColor="@color/green"
+                android:textSize="50sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/dash4"
+                app:layout_constraintEnd_toEndOf="@+id/dash4"
+                app:layout_constraintStart_toStartOf="@+id/dash4" />
+
+            <View
+                android:id="@+id/dash4"
+                android:layout_width="35dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/dash"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dash5"
+                app:layout_constraintStart_toEndOf="@id/dash3" />
+
+            <TextView
+                android:id="@+id/letter5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="I"
+                android:textColor="@color/green"
+                android:textSize="50sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/dash5"
+                app:layout_constraintEnd_toEndOf="@+id/dash5"
+                app:layout_constraintStart_toStartOf="@+id/dash5" />
+
+            <View
+                android:id="@+id/dash5"
+                android:layout_width="35dp"
+                android:layout_height="6dp"
+                android:background="@color/dash"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dash4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sWordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginHorizontal="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/finishBtn"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout1"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/sWordLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/sWord1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout2"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/sWordLayout3"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/sWord2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="I"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout3"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/sWordLayout4"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/sWord3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="C"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout4"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/sWordLayout5"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/sWord4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="L"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout5"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout4"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/sWord5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="T"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout6"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sWordLayout7"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/sWord6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="J"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout7"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sWordLayout8"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout6">
+
+            <TextView
+                android:id="@+id/sWord7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="T"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout8"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sWordLayout9"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout7">
+
+            <TextView
+                android:id="@+id/sWord8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="O"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sWordLayout9"
+            style="@style/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sWordLayout8">
+
+            <TextView
+                android:id="@+id/sWord9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/summery_notes_regular"
+                android:text="I"
+                android:textAlignment="center"
+                android:textColor="@color/sword"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

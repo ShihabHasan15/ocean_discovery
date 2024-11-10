@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="360dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/completition_dialog25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/completeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="138dp"
+            android:fontFamily="@font/bubble_bobble"
+            android:text="GAME OVER"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scoreLaout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/completeTxt"
+            app:layout_constraintStart_toStartOf="@+id/completeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/completeTxt">
+
+            <TextView
+                android:id="@+id/complementTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bubble_bobble"
+                android:text="You did it!"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/rewardTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:text="Reward"
+            android:textColor="@color/reward_text_color"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/scoreLaout"
+            app:layout_constraintStart_toStartOf="@+id/scoreLaout"
+            app:layout_constraintTop_toBottomOf="@+id/scoreLaout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/rewardTxt"
+            app:layout_constraintStart_toStartOf="@+id/rewardTxt"
+            app:layout_constraintTop_toBottomOf="@+id/rewardTxt">
+
+            <ImageView
+                android:id="@+id/rewardImage"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/happy_emoji"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rewardAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="50"
+                android:textColor="@color/reward_amount_color"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/rewardImage"
+                app:layout_constraintStart_toEndOf="@+id/rewardImage"
+                app:layout_constraintTop_toTopOf="@+id/rewardImage" />
+
+            <TextView
+                android:id="@+id/rewardUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="PP"
+                android:textColor="@color/reward_amount_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/rewardAmount"
+                app:layout_constraintTop_toTopOf="@+id/rewardAmount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/okButton"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#67EB00"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/white"
+            app:strokeWidth="5px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/digitalt"
+                android:text="YEH! OK"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

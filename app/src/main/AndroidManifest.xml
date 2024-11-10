@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OceanDiscovery"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sea_level_statistics"
+            android:exported="false" />
+        <activity
+            android:name=".aerosol_cloud"
+            android:exported="false" />
+        <activity
+            android:name=".phyto_fighters"
+            android:exported="false" />
+        <activity
+            android:name=".spex_one"
+            android:exported="false" />
+        <activity
+            android:name=".Harp2"
+            android:exported="false" />
+        <activity
+            android:name=".oci"
+            android:exported="false" />
+        <activity
+            android:name=".pace_and_its_data"
+            android:exported="false" />
+        <activity
+            android:name=".ocean_color"
+            android:exported="false" />
+        <activity
+            android:name=".chlorophyll"
+            android:exported="false" />
+        <activity
+            android:name=".carbon_cycle"
+            android:exported="false" />
+        <activity
+            android:name=".word_game"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCLaYOr1-lpqg4CrCaYaiQ9ii9nj59bnqw" />
+
+        <activity
+            android:name=".level4"
+            android:exported="false" />
+        <activity
+            android:name=".level3"
+            android:exported="false" />
+        <activity
+            android:name=".level2"
+            android:exported="false" />
+        <activity
+            android:name=".GameOver"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".save_the_ocean_game"
+            android:exported="false" />
+        <activity
+            android:name=".details_learning_video"
+            android:exported="false" />
+        <activity
+            android:name=".details_learning"
+            android:exported="false" />
+        <activity
+            android:name=".quiz_activity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson_list"
+            android:exported="false" />
+        <activity
+            android:name=".learning_activity"
+            android:exported="false" />
+        <activity
+            android:name=".heat_map"
+            android:exported="false" />
+        <activity
+            android:name=".splash_activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

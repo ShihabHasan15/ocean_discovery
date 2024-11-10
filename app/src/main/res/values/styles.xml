@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="button1">
+        <item name="android:fontFamily">@font/summery_notes_regular</item>
+        <item name="android:background">@drawable/button_bg_1</item>
+        <item name="android:textColor">#FFFF</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="button2">
+        <item name="android:fontFamily">@font/summery_notes_regular</item>
+        <item name="android:background">@drawable/button_bg_2</item>
+        <item name="android:textColor">#FFFF</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="button3">
+        <item name="android:background">@drawable/button_bg_3</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="button5">
+        <item name="android:fontFamily">@font/summery_notes_regular</item>
+        <item name="android:background">@drawable/button_bg_5</item>
+        <item name="android:textColor">#FFFF</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+</resources>

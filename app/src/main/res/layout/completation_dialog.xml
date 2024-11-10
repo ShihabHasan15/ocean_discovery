@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:background="@android:color/transparent"
+    android:layout_height="350dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/completition_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lessonNumbertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="93dp"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:text="Lesson 1"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/completeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/summery_notes_regular"
+            android:text="COMPLETE"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="@+id/lessonNumbertxt"
+            app:layout_constraintStart_toStartOf="@+id/lessonNumbertxt"
+            app:layout_constraintTop_toBottomOf="@+id/lessonNumbertxt" />
+
+        <TextView
+            android:id="@+id/complementTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/summery_notes_regular"
+            android:text="You did it, Shihab!"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/completeTxt"
+            app:layout_constraintStart_toStartOf="@+id/completeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/completeTxt" />
+
+        <TextView
+            android:id="@+id/rewardTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:text="Reward"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/complementTxt"
+            app:layout_constraintStart_toStartOf="@+id/complementTxt"
+            app:layout_constraintTop_toBottomOf="@+id/complementTxt" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/rewardTxt"
+            app:layout_constraintStart_toStartOf="@+id/rewardTxt"
+            app:layout_constraintTop_toBottomOf="@+id/rewardTxt">
+
+            <ImageView
+                android:id="@+id/rewardImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/candy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rewardAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="50"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/rewardImage"
+                app:layout_constraintStart_toEndOf="@+id/rewardImage"
+                app:layout_constraintTop_toTopOf="@+id/rewardImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/finishBtn"
+            style="@style/button5"
+            android:layout_marginHorizontal="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:text="YAY, OK!"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
